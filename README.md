@@ -690,7 +690,11 @@ NOTE: Bret has a new page but _he siliently omits CRC32_ due to his misunderstan
 
 * http://papa.bretmulvey.com/post/124027987928/hash-functions
 
-This Stack Overflow TODO:FIXME mentions Bret didn't implement CRC32 correctly,
+This Stack Overflow question:
+
+* http://stackoverflow.com/questions/10953958/can-crc32-be-used-as-a-hash-function
+
+mentions Bret didn't implement CRC32 correctly,
 but no one actually says WHAT the bug(s) are!
 
 We can inspect the:
