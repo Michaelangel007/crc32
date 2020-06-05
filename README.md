@@ -46,7 +46,7 @@ Second, when we initialize the table we can shift bits to the left or right.
 
 Third, when we calculate the CRC value we can shift bits to left or right.
 Ross Williams mentions in his guide:
-[A PAINLESS GUIDE TO CRC ERROR DETECTION ALGORITHMS](http://www.ross.net/crc/download/crc_v3.txt)
+[A PAINLESS GUIDE TO CRC ERROR DETECTION ALGORITHMS](http://ross.net/crc/download/crc_v3.txt)
 
 > "There are really only two forms: normal and reflected. Normal
 > shifts to the left and covers the case of algorithms with Refin=FALSE
