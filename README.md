@@ -57,7 +57,7 @@ And gives these two formulas:
 
 ```c
     Normal:  crc = table[ ((crc>>24) ^ *data++) & 0xFF ] ^ (crc << 8);
-    Reflect: crc = table[ (crc       ^ *data++) & 0xFF ] ^ (crc >> 8));
+    Reflect: crc = table[ (crc       ^ *data++) & 0xFF ] ^ (crc >> 8);
 ```
 
 Note: that while the latter "reflected" formula is correct,
