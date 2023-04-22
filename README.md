@@ -563,7 +563,7 @@ Here are the 4 CRC32 tables:
 
 Enumerating all 32 initialization and calculation permutations:
 
-* See [enum_crc32.cpp](enum_crc32.cpp)
+* See [enum_crc32.cpp](src/enum_crc32.cpp)
 
 |Polynomial|Bit| Init    |Shift<br>CRC>|Reverse<br>Data|Reverse<br>CRC| Function      |Valid|
 |:---------|--:|--------------------|:----:|:----------:|:-----------:|:--------------|----:|
