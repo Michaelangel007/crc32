@@ -6,21 +6,21 @@ By Michaelangel007
 
 # Table of Contents
 
-* Introduction
-* Checksum
-* CRC32 Implementation
-  * Formulaic CRC
-  * Table-Lookup CRC
-     * CRC32 Tables
-     * All CRC32 Permutations
-* TL:DR; CRC32 Summary
-* CRC32 Hashing Confusion
-  * Bad Code
-  * Why two forms?
-  * Bad Data
-* CRC32 or CRC33?
+* [Introduction](#introduction)
+* [Checksum](#checksum)
+* [CRC32 Implementation](#crc32-implementation)
+  * [Formulaic CRC](#formulaic-crc)
+  * [Table-Lookup CRC](#table-lookup-crc)
+     * [CRC32 Tables](#crc32-tables)
+     * [All CRC32 Permutations](#all-crc32-permutations)
+* [TL:DR; CRC32 Summary](#tldr-crc32-summary)
+* [CRC32 Hashing Confusion](#crc32-hashing-confusion)
+  * [Bad Code](#bad-code)
+  * [Why two forms?](#why-two-forms)
+  * [Bad Data](#bad-data)
+* [CRC32 or CRC33?](#crc32-or-crc33)
 * TL:DR; demo
-* References
+* [References](#references)
 
 # Introduction
 
@@ -171,7 +171,7 @@ Produces this output:
     3421780262 9 crctest.txt
 ```
 
-Converting to hex via [Basic Calculator](https://en.wikipedia.org/wiki/Bc_(programming_language\))
+Converting to hex via [Basic Calculator](https://en.wikipedia.org/wiki/Bc_(programming_language))
 
 ```bash
      echo "obase=16; 3421780262;" | bc
