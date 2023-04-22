@@ -1179,3 +1179,5 @@ int main()
 
 * https://decryptpassword.com/encrypt/
 
+* "Fastest CRC32 for x86, Intel and AMD, + comprehensive derivation and discussion of various approaches"
+  https://github.com/komrad36/CRC
