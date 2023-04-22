@@ -25,7 +25,7 @@ int main()
 
     common_init();
 
-    printf( "String: '%s' (Input:%d)\n", text, length );
+    printf( "String: '%s' (Input:%d)\n", text, (int)length );
     printf( "CRC = 0x%08X (Expected)\n", check );
     printf( "\n" );
 
