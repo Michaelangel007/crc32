@@ -12,7 +12,7 @@ Copyleft (C) 2017
     // Before using must first call:
     //     reverse_init()
     // NOTE: If you're thrashing the L1 cache, change to uint8_t
-    uint32_t reverse[ 256 ]; // 8-bit reverse bit look-up table
+    extern uint32_t REVERSE_BITS[ 256 ]; // 8-bit reverse bit look-up table
 
 // Utility
 
@@ -35,12 +35,12 @@ Copyleft (C) 2017
    @return {uint32_t}   - value bit reversed
 */
     // ========================================================================
-    uint32_t reflect32( const uint32_t x )
+    inline uint32_t reflect32( const uint32_t x )
     {
         uint32_t bits = 0;
         uint32_t mask = x;
-
-        for( int i = 0; i < sizeof(x)*8; i++ )
+        const int BitsPerInt = sizeof(x) * 8;
+        for( int i = 0; i < BitsPerInt; i++ )
         {
             bits <<= 1;
             if( mask & 1 )
@@ -56,21 +56,21 @@ Copyleft (C) 2017
      * @return {uint32_t}     value bit reversed
      */
     // ========================================================================
-    uint32_t reverse32( const uint32_t x )
+    inline uint32_t reverse32( const uint32_t x )
     {
         return 0
-        | reverse[ (x >> 24) & 0xFF ] <<  0L
-        | reverse[ (x >> 16) & 0xFF ] <<  8L
-        | reverse[ (x >>  8) & 0xFF ] << 16L
-        | reverse[ (x >>  0) & 0xFF ] << 24L;
+        | REVERSE_BITS[ (x >> 24) & 0xFF ] <<  0L
+        | REVERSE_BITS[ (x >> 16) & 0xFF ] <<  8L
+        | REVERSE_BITS[ (x >>  8) & 0xFF ] << 16L
+        | REVERSE_BITS[ (x >>  0) & 0xFF ] << 24L;
     }
 
     // Table-Lookup
     // ========================================================================
-    void reverse_init()
+    void ReverseBits_Init()
     {
         for( int byte = 0; byte < 256; byte++ )
-            reverse[ byte ] = (reflect32( byte ) >> 24) & 0xFF;
+            REVERSE_BITS[ byte ] = (reflect32( byte ) >> 24) & 0xFF;
 
 //      for( int byte = 0; byte < 256; byte++ )
 //          printf( "Byte: %02X -> %08X -> %02X\n", byte, reflect32( byte ), (reflect32( byte ) >> 24) & 0xFF );
