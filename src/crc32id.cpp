@@ -123,20 +123,37 @@ int main(int nArg, char *aArg[])
     if( !poly )
     {
         printf( "Using your favorite crc32()\n" );
-        printf( "1. Enter the 32-bit Polynomial (in hex) used:\n" );
-        if (fgets(buffer, sizeof(buffer), stdin))
-            sscanf( buffer, "%X", &poly );
+        printf( "1. Enter the 32-bit Polynomial (in hex) used such %08X (default) or %08X:\n", POLY_FORWARD, POLY_REVERSE );
+
+        char *text = fgets(buffer, sizeof(buffer), stdin);
+        while( *text && isspace( *text ) )
+            text++;
+
+        if (strlen(text))
+            sscanf(buffer, "%X", &poly);
+        else
+            poly = POLY_FORWARD;
     }
 
     if (!hash)
     {
-        printf( "2. Enter the 32-bit Hash value (in hex) it generates for the string: %s\n", CRC32_CHECK_TXT );
-        if (fgets(buffer, sizeof(buffer), stdin))
+        printf( "2. Enter the 32-bit Hash value (in hex) it generates such as %08X (default) for data '%s'\n", CRC32Family[0], CRC32_CHECK_TXT );
+        char *text = fgets(buffer, sizeof(buffer), stdin);
+        while( *text && isspace( *text ) )
+            text++;
+
+        if (strlen(text))
             sscanf(buffer, "%X", &hash);
+        else
+            hash = CRC32Family[0];
     }
 
+    printf( "Analyzing poly %08X with hash %08X...\n", poly, hash );
     id = CRC32Id( poly, hash );
-    printf( "CRCid: %d\n", id);
+    if (id < 0)
+        printf( "CRCid: unknown\n" );
+    else
+        printf( "CRCid: %d\n", id);
     CRC32Analysis( id );
 
     return 0;
