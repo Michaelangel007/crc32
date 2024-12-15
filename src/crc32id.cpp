@@ -1,4 +1,9 @@
-#include "common.h"
+#if _WIN32
+    #define _CRT_SECURE_NO_WARNINGS 1
+#endif
+
+#include "common.cpp"
+#include <ctype.h> // isspace()
 
 const uint32_t CRC32Family[32]
 {
