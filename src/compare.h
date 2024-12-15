@@ -98,20 +98,3 @@ Copyleft (C) 2017
         }
         printf( "\n" );
     }
-
-
-// ========================================================================
-void common_init( const int bDumpTables = false )
-{
-    reverse_init();
-
-    crc32_init_normal ( aCRC32, CRC32_FORWARD ); // Valid
-    crc32_init_reflect( bCRC32, CRC32_FORWARD ); // Mismatched reflect form with forward polynomial
-    crc32_init_normal ( cCRC32, CRC32_REVERSE ); // Mismatched normal  form with reverse polynomial
-    crc32_init_reflect( dCRC32, CRC32_REVERSE ); // Valid
-
-    if( bDumpTables )
-        for( int iTable = 0; iTable < nDesc; iTable++ )
-            dump( aDesc[ iTable ], aData[ iTable ] );
-}
-
