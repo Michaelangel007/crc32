@@ -56,6 +56,7 @@ const uint32_t CRC32Family[32]
     //                   1 = Right
 };
 
+// returns -1 if couldn't identify
 int CRC32Id(const uint32_t poly, const uint32_t hash)
 {
     const int nHash = (int) (sizeof(CRC32Family) / sizeof(CRC32Family[0]));
