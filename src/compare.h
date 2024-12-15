@@ -9,10 +9,10 @@ Copyleft (C) 2017
 */
 
 // Globals
-    uint32_t aCRC32[ 256 ]; // Init Normal    form (Top-Bit) + forward polynomial
+    uint32_t aCRC32[ 256 ]; // Init Normal    form (Top-Bit) + forward polynomial VALID
     uint32_t bCRC32[ 256 ]; // Init Reflected form (Low-Bit) + forward polynomial
     uint32_t cCRC32[ 256 ]; // Init Normal    form (Top-Bit) + reverse polynomial
-    uint32_t dCRC32[ 256 ]; // Init Reflected form (Low-Bit) + reverse polynomial
+    uint32_t dCRC32[ 256 ]; // Init Reflected form (Low-Bit) + reverse polynomial VALID
 
     // Array of pointers to data
     const uint32_t *aData[] =
