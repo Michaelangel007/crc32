@@ -86,8 +86,7 @@ int main( const int nArg, const char *aArg[] )
     const int nLen = (int) strlen( pArg );
     const unsigned char *pData = (const unsigned char*) pArg;
 
-    printf( "CRC32A = 0x%08X         \n", crc32a_formula_normal_noreverse( nLen, pData ) );
-    printf( "CRC32B = 0x%08X; // '%s'\n", crc32b_table_reflect( nLen, pData ), pArg );
+    printf( "CRC32A = 0x%08X             \n", crc32a_formula_normal_noreverse( nLen, pData ) );
+    printf( "CRC32B = 0x%08X; // '%s' (%d)\n", crc32b_table_reflect( nLen, pData ), pArg, nLen );
     return 0;
 }
-
