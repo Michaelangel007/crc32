@@ -9,14 +9,14 @@ Copyleft (C) 2017
 */
 
 // Includes
-    #include "common.h"
+    #include "common.cpp"
 
 // ========================================================================
 int main()
 {
     common_init( true );
 
-    dump( "Reverse Bits:", reverse);
+    dump( "Reverse Bits:", REVERSE_BITS );
 
 #if 0
 
