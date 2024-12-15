@@ -51,10 +51,10 @@ Copyleft (C) 2017
 
     uint32_t aPoly[] =
     {
-         CRC32_FORWARD
-        ,CRC32_FORWARD
-        ,CRC32_REVERSE
-        ,CRC32_REVERSE
+         POLY_FORWARD
+        ,POLY_FORWARD
+        ,POLY_REVERSE
+        ,POLY_REVERSE
     };
 
     // Formulaic CRC
