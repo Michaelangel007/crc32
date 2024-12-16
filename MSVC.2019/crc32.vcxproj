@@ -83,7 +83,7 @@
     <PublicIncludeDirectories>$(SolutionDir)..\src\;$(SourcePath)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <SourcePath>$(SolutionDir)..\src\;$(SourcePath)</SourcePath>
     <PublicIncludeDirectories>$(SolutionDir)..\src\;$(SourcePath)</PublicIncludeDirectories>
   </PropertyGroup>

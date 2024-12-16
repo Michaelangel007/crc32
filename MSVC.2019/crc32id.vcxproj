@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{5f8870d0-1877-4a79-9a0b-b427c44b267c}</ProjectGuid>
-    <RootNamespace>crc32</RootNamespace>
+    <RootNamespace>crc32id</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>crc32id</ProjectName>
   </PropertyGroup>

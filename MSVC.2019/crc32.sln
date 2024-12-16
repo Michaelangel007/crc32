@@ -9,9 +9,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crc32id", "crc32id.vcxproj"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demo", "demo.vcxproj", "{5F8870D0-1877-4A79-9A0B-B427C44B267D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "find_zero", "find_zero.vcxproj", "{5F8870D0-1877-4A79-9A0B-B427C44B267F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "findzero", "findzero.vcxproj", "{5F8870D0-1877-4A79-9A0B-B427C44B267F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tables", "test_table.vcxproj", "{614A27AC-2689-4B1E-806A-A9942A894FC9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tables", "tables.vcxproj", "{614A27AC-2689-4B1E-806A-A9942A894FC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
