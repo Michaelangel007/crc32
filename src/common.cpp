@@ -22,7 +22,15 @@ void common_init( const int bDumpTables = false )
     if (dCRC32[ 8] != (POLY_REVERSE >> 4)) printf( "ERROR: Failed to initialized CRC32 table\n" );
     if (dCRC32[ 1] ==                   0) printf( "ERROR: Failed to initialized CRC32 table\n" );
 
-    if( bDumpTables )
+    if (bDumpTables)
+    {
         for( int iTable = 0; iTable < nDesc; iTable++ )
             dump( aDesc[ iTable ], aData[ iTable ] );
+
+        printf( "aCRC32 = { 0x%08X, 0x%08X, ..., 0x%08X }\n", aCRC32[0], aCRC32[1], aCRC32[255] );
+        printf( "bCRC32 = { 0x%08X, 0x%08X, ..., 0x%08X }\n", bCRC32[0], bCRC32[1], bCRC32[255] );
+        printf( "cCRC32 = { 0x%08X, 0x%08X, ..., 0x%08X }\n", cCRC32[0], cCRC32[1], cCRC32[255] );
+        printf( "dCRC32 = { 0x%08X, 0x%08X, ..., 0x%08X }\n", dCRC32[0], dCRC32[1], dCRC32[255] );
+        printf( "\n" );
+    }
 }
