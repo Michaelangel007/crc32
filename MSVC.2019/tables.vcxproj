@@ -81,11 +81,13 @@
     <LinkIncremental>true</LinkIncremental>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)..\src\;</SourcePath>
     <PublicIncludeDirectories>$(SolutionDir)..\src\;</PublicIncludeDirectories>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <SourcePath>$(VC_SourcePath);$(SolutionDir)..\src\;</SourcePath>
     <PublicIncludeDirectories>$(SolutionDir)..\src\;</PublicIncludeDirectories>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
