@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{614a27ac-2689-4b1e-806a-a9942a894fc9}</ProjectGuid>
-    <RootNamespace>testtable</RootNamespace>
+    <RootNamespace>tables</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>tables</ProjectName>
   </PropertyGroup>
