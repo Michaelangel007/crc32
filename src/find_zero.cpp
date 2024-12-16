@@ -212,12 +212,12 @@ size_t SearchLen5()
 #else
         const int iThread = 0;
 #endif
-        char           crctext[8];
+        char           keytext[8]; // TODO: Remove keytext[LENGTH] = 0 by initializing to = { 0, 0, 0, 0, 0, 0, 0, 0, 0, };
         uint64_t       Haystack = ((uint64_t)iPage    ) << 32;
         uint64_t       Remain   = SUB_RANGE;
         unsigned int   crc;
 
-        while( Remain --> 0 )
+        while (Remain --> 0)
         {
 #if 1 // Sans inlining: 2:19
             unsigned char *pNeedle  = (unsigned char*) &Haystack; // Printable v1
@@ -236,8 +236,9 @@ size_t SearchLen5()
 #endif
             if (crc == 0)
             {
-                Printable( pNeedle, LENGTH, crctext );
-                printf( ", 0x%010llX // %s  [#%02d, Page: %02X]\n", Haystack, crctext, iThread, iPage );
+                //Printable( pNeedle, LENGTH, keytext );
+                Printable2( LENGTH, Haystack, keytext );
+                printf( ", 0x%010llX // %s  [#%02d, Page: %02X]\n", Haystack, keytext, iThread, iPage );
 #pragma omp atomic
                 total++;
             }
