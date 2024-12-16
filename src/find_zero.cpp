@@ -51,7 +51,7 @@ void Hexdump(uint64_t data, const size_t length, char* text )
         sprintf( &text[offset*3], "%02llX ", (data >> (8 * offset)) & 0xFF );
 }
 
-
+// v1
 void Printable(unsigned char* data, const size_t length, char* text)
 {
     if (!data) return;
@@ -62,6 +62,20 @@ void Printable(unsigned char* data, const size_t length, char* text)
         else if (data[ offset ] >= 0x7F) text[offset] = '?';
         else                             text[offset] = data[offset];
 
+    text[length] = 0;
+}
+
+// v2
+inline void Printable2(const size_t length, uint64_t crc, char* text)
+{
+    for( int offset = 0; offset < length; offset++ )
+    {
+        uint8_t byte = crc & 0xFF;
+             if (byte <= 0x20) text[offset] = '.';
+        else if (byte >= 0x7F) text[offset] = '?';
+        else                   text[offset] = byte;
+        crc >>= 8;
+    }
     text[length] = 0;
 }
 
