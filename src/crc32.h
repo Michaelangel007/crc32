@@ -27,6 +27,11 @@ History:
     const uint32_t POLY_FORWARD = 0x04C11DB7; // forward = shift left
     const uint32_t POLY_REVERSE = 0xEDB88320; // reverse = shift right = reflect32( POLY_FORWARD );
 
+    //Popular ones include:
+    //   0x04C11DB7 "Ethernet"
+    //   0xDB710641
+    //   0x82608EDB
+
 /* */     uint32_t CRC32_FORWARD[256]; // init with poly = 0x04C11DB7
 /* */     uint32_t CRC32_REVERSE[256]; // init with poly = 0xEDB88320, // [0]=0x00000000, [1]=0x77073096,
 
