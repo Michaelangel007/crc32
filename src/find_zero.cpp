@@ -215,15 +215,14 @@ size_t SearchLen5()
         char           crctext[8];
         uint64_t       Haystack = ((uint64_t)iPage    ) << 32;
         uint64_t       Remain   = SUB_RANGE;
-        unsigned char *pNeedle  = (unsigned char*) &Haystack;
         unsigned int   crc;
 
         while( Remain --> 0 )
         {
-#if 0
-            *((uint32_t*)(&pNeedle[1])) = bytes5;
-            result5 = crc32_reverse( LENGTH, pNeedle );
-#else
+#if 1 // Sans inlining: 2:19
+            unsigned char *pNeedle  = (unsigned char*) &Haystack; // Printable v1
+            crc = crc32_reverse( LENGTH, pNeedle );
+#else // With inlining: 2:27
             crc = -1;
             size_t nLength = LENGTH;
             size_t nData = Haystack;
