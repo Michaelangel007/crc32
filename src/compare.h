@@ -36,7 +36,7 @@ Copyleft (C) 2017
     int ERROR_aData_size_not_equal_aDesc[ nData == nDesc ];
 
     // Table-Lookup CRC
-    const Crc32Func_t aFunc[] =
+    const Crc32Table_t aFunc[] =
     {
          crc32_000
         ,crc32_001
@@ -47,7 +47,7 @@ Copyleft (C) 2017
         ,crc32_110
         ,crc32_111
     };
-    const int nFunc = sizeof( aFunc ) / sizeof( Crc32Func_t );
+    const int nFunc = sizeof( aFunc ) / sizeof( Crc32Table_t );
 
     uint32_t aPoly[] =
     {
