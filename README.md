@@ -1332,6 +1332,7 @@ int main()
 * "Highly optimized CRC32C lib and benchmark"
   https://github.com/htot/crc32c
   https://github.com/htot/crc32c/blob/master/crc32c/crc32ctables.cc
+  https://github.com/google/crc32c/blob/main/src/crc32c_portable.cc
 
 * (Slicing) "A Systematic Approach to Building High Performance Software-Based CRC Generators"
   https://www.computer.org/csdl/proceedings-article/iscc/2005/23730855/12OmNBqv2l2
