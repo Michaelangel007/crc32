@@ -1308,6 +1308,8 @@ int main()
 * "Hackers Delight", Chapter 14
   http://www.hackersdelight.org/crc.pdf
 
+* https://create.stephan-brumme.com/crc32/
+
 * Bret Mulvey
   https://web.archive.org/web/20130420172816/http://home.comcast.net/~bretm/hash/8.html
   http://archive.is/6rBZF#selection-251.11-251.21
@@ -1325,3 +1327,12 @@ int main()
 
 * "Fastest CRC32 for x86, Intel and AMD, + comprehensive derivation and discussion of various approaches"
   https://github.com/komrad36/CRC
+
+* CRC32C aka CRC-32-Castagnoli
+* "Highly optimized CRC32C lib and benchmark"
+  https://github.com/htot/crc32c
+  https://github.com/htot/crc32c/blob/master/crc32c/crc32ctables.cc
+
+* (Slicing) "A Systematic Approach to Building High Performance Software-Based CRC Generators"
+  https://www.computer.org/csdl/proceedings-article/iscc/2005/23730855/12OmNBqv2l2
+
