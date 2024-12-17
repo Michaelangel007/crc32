@@ -43,6 +43,7 @@ void Measure( FuncPtr pSearchLenFunc )
     printf( "\n" );
 }
 
+// ========================================================================
 void Hexdump(uint64_t data, const size_t length, char* text )
 {
     if (!text) return;
@@ -195,6 +196,7 @@ size_t SearchLen4()
     FOOTER;
 }
 
+// ========================================================================
 size_t SearchLen5()
 {
     const int    LENGTH    = 5;
@@ -249,6 +251,7 @@ size_t SearchLen5()
     FOOTER;
 }
 
+// ========================================================================
 void SetString(uint64_t key, size_t length, unsigned char* data)
 {
     for (int byte = 0; byte < length; byte++)
